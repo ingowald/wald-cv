@@ -1,0 +1,1972 @@
+\ifx\empty
+~
+\fi
+
+%% start of file `jdoe_casual.tex'.
+%% Copyright 2006 Xavier Danaux.
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[letterpaper,11pt]{moderncv}
+%\documentclass[a4paper,11pt]{moderncv}
+\usepackage{xspace}
+
+\usepackage{relsize}
+
+% moderncv styles
+%\moderncvstyle{casual}         % optional argument are 'nocolor' (black & white cv) and 'roman' (for roman fonts, instead of sans serif fonts)
+\moderncvstyle{classic}       % idem
+
+% character encoding
+\usepackage[utf8]{inputenc}   % replace by the encoding you are using
+
+% personal data (the given example is exhaustive; just give what you want)
+\firstname{Dr.-ing.\ Ingo}
+\familyname{Wald}
+\title{
+Tech Lead Software Defined Visualization
+\newline
+Intel Technical Computing Group\vspace*{2mm}
+\newline
+Adjunct Assistant Professor
+\newline
+School of Computing, University of Utah
+\vspace*{2mm}
+}
+
+% \title{Research Assistant Professor 
+% \vspace{2mm}
+% \newline
+% School of Computing
+% \vspace{1mm}
+% \newline
+% University of Utah}
+% \title{
+% Research Scientist, 
+% \newline
+% \hspace*{4mm}  
+% Advanced Graphics Architectures, Intel Corp.
+% \vspace{2mm}
+% \newline
+% %Adjunct Professor, 
+% Research Assistant Professor, 
+% \newline
+% \hspace*{4mm} School of Computing, University of Utah}
+
+%\address{12 somestreet\\3456 somecity} % for classic style
+\addressone{Ingo Wald}
+\addresstwo{10631 Chestnut Ridge Rd}  % for casual style
+\addressthree{Austin, TX, 78726}  % for casual style
+%\addresstwo{2200 Mission College Blvd \#302}  % for casual style
+%\addressthree{Santa Clara, CA, 95054}  % for casual style
+%\phone{+49 172 841 9971}
+\phone{(801) 556 2503}
+\email{\url{Ingo.Wald@intel.com}}
+\extrainfo{\url{www.sci.utah.edu/~wald}}
+%\photo[85pt]{wald}
+%\photo[64pt]{wald_sci}
+
+%\renewcommand{\listsymbol}{{\fontencoding{U}\fontfamily{ding}\selectfont\tiny\symbol{'102}}} % define another symbol to be used in front of the list items
+
+% the ConTeXt symbol
+\def\ConTeXt{%
+  C%
+  \kern-.0333emo%
+  \kern-.0333emn%
+  \kern-.0667em\TeX%
+  \kern-.0333emt}
+
+% slanted small caps (only with roman family; the sans serif font doesn't exists :-()
+%\usepackage{slantsc}
+%\DeclareFontFamily{T1}{myfont}{}
+%\DeclareFontShape{T1}{myfont}{m}{scsl}{ <-> cork-lmssqbo8}{}
+%\usefont{T1}{myfont}{m}{scsl}Testing the font
+
+% command and color used in this document, independently from moderncv 
+\definecolor{see}{rgb}{0.5,0.5,0.5}% for web links
+\newcommand{\up}[1]{\ensuremath{^\textsf{\scriptsize#1}}}% for text subscripts
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\vspace*{-1em}
+\maketitle
+\vspace*{-3em}
+\makequote
+
+
+\def\ende#1#2{#1}
+%\def\ende#1#2{#2}
+\def\in{In\xspace}
+\def\proc{\in Proceedings of\xspace}
+
+\def\mit{\ende{with}{mit}\xspace}
+\def\with{\ende{with}{mit}\xspace}
+\def\und{\ende{and}{und}\xspace}
+\def\and{\ende{and}{und}\xspace}
+\def\seit{\ende{since}{seit}\xspace}
+\def\pages{\ende{pages}{S.}\xspace}
+\def\indeutsch{\ende{(in german)}{(in Deutsch)}\xspace}
+\def\may{\ende{May}{Mai}\xspace}
+\def\mar{\ende{Mar}{M\"arz}\xspace}
+
+\def\meanwhileavailable{\emph{Submitted for publication,} meanwhile available as\xspace}
+\def\submitted{Submitted for publication}
+
+\def\cvbibitem#1#2#3#4{\cvitem{{$\color{titlecolor}\triangleright$}}{{\bfseries
+      #1.\ }{\ifthenelse{\equal{#2}{}}{}{#2.\ }}{\ifthenelse{\equal{#3}{}}{}{\emph{#3}.\ }}{\ifthenelse{\equal{#4}{}}{}{#4.\xspace}}}}
+
+
+\def\cvownitem#1#2#3{\cvitem{{$\color{titlecolor}\triangleright$}}{{\bfseries
+      #1.\ }{\ifthenelse{\equal{#2}{}}{}{\em #2.\ }}{\ifthenelse{\equal{#3}{}}{}{#3.\xspace}}}}
+
+\vspace*{-4mm}
+
+%\firstnamestyle{\Huge{Curriculum Vitae Dr.-ing.\ Ingo Wald}}
+%\vspace*{4mm}
+%\begin{center}
+%{\color{sectiontitlecolor} \relsize{+4}{{Curriculum Vitae Dr.-ing.\ Ingo Wald}}}
+%\end{center}
+
+\vspace{-12mm}
+\section{Personal Data}
+\cvitem{Name}{Ingo Wald}
+\cvitem{Born}{March 29, 1974, in Bad Kreuznach, Germany\\Nationality: German; Residency: US (Permant Resident Card)}
+%\cvitem{Marital Status}{Married, three children.}
+
+\vspace*{-3mm}
+\section{Scientific Achievements in Brief}
+\vspace*{-1mm}
+\cvitem{Publications}{4 patents, 23 journal articles; 40~conference
+  papers; 3~peer-reviewed STAR reports; 2~conference proceedings (edited); 
+%3~SIGGRAPH courses\\
+(Intel-internal papers intentionally excluded)}
+\cvitem{Academic Impact}{Citation count (scholar.google.com) for most cited
+  paper (Oct): $>500$.
+\\
+h-index (\#publications with more than N citations): 37 (google scholar, Oct'15).}
+
+
+\vspace*{-3mm}
+
+\section{Professional Experience}
+\vspace*{-1mm}
+\cventry{2013--current}
+{Intel Technical Computing Group (Data Center Group), Intel Corp}
+{Senior Research Scientist}
+{Tech Lead 
+High-Fidelity and 
+Software Defined Visualization
+}
+{}
+{}
+\cventry{2007--2013}
+{Intel Labs, Intel Corp}
+{Senior Research Scientist}
+{}
+{}
+{}
+\cventry{2005--2007}
+{Scientific Computing and Imaging
+(SCI) Institute and School of Computing, University of Utah}
+{Research Assistant Professor (adjunct appointment still active}
+{}
+{}
+{}
+\cventry{2004--2005}
+{Max Planck Institut Informatik Saarbr\"ucken}
+{Research Associate (Post-Doc)}
+{}
+{}
+{}
+\cventry{2000--2004}
+{Saarland University}
+{Research Associate%
+% (wissenschaftlicher Mitarbeiter)
+, Computer Graphics Group}
+{}
+{}
+{
+}
+\closesection
+
+
+\vspace*{-4mm}
+
+\section{Education}
+\vspace*{-1mm}
+\cventry{2000--2004}{
+Dr.-ing. (PhD equivalent)%
+%PhD in Computer Science
+}{Saarland University,
+  Saarbr\"ucken, Germany}
+{}{}{Awarded Degree: Dr.-ing.\ mit Auszeichnung (PhD in Computer Science, with Distinction).}
+\cventry{1993--1999}{Dipl-inform.(MS equivalent)}{Kaiserslautern University,
+  Kaiserslautern, Germany}
+{}{}{Awarded Degree: Dipl-inform, sehr gut (Masters in Computer
+  Science, A equivalent).}
+\cventry{1984-1993}{Abitur (High-School equivalent)}{Alfred Delp Schule Hargesheim, Germany}
+{}{}{Awarded Degree: Allgemeine Hochschulreife (Abitur), sehr gut
+  (High School, A equivalent).}
+
+
+
+\vspace*{-2mm}
+\section{Research Interests}
+\vspace*{-1mm}
+\cvlistitem{
+Efficient Computing on 
+%General Purpose Graphics
+High-Throughput Compute Architectures (MIC/Xeon Phi)}
+%
+%\cvlistitem{Innovate compute platforms that combine many heterogeneous
+%  nodes, wide-SIMD/SIMT, many-core, \dots}
+%
+%
+\cvlistitem{Ray Tracing 
+(in particular, using Embree and OSPRay)}
+\cvlistitem{Parallel and High-Performance Rendering (in part.\ using ray tracing)}
+\cvlistitem{Ray Tracing for High-Fidelity Visualization}
+%large-scale and time-varying data}
+\cvlistitem{Photo-realistic Rendering / Monte-Carlo lighting simulation}
+%\cvlistitem{Parallel and distributed rendering}
+\cvlistitem{SPMD Compilers and Languages for High-Performance Computing Architectures}
+\cvlistitem{Efficient
+% hierarchical
+ data structures and
+% traversal
+  algorithms, in particular on innovative HPC platforms
+}
+% (SIMT, wide-SIMD, many-core, clusters, heterogeneous, \dots)}
+%\cvlistdoubleitem{Double\dots{}}{\dots{} item.}
+%\cvlistdoubleitem{Another double\dots{}}{\dots{} item.}
+
+
+%\vspace{2em}
+%\flushright
+%\hspace{-30mm}
+\closesection{}
+Austin, TX, Oct 10, 2014
+\vspace*{-2em}
+
+\closesection{}
+%\pagebreak
+\cleardoublepage
+
+
+
+% =======================================================
+% =======================================================
+% =======================================================
+\firstnamestyle{\Huge{Publications}}
+\vspace*{6mm}
+
+% =======================================================
+\section{Patents}
+
+\cvbibitem
+{Ray Tracing a Three Dimensional Scene using a Grid}
+{Ingo Wald, Thiago Ize, Steven G Parker, and Aaron Knoll}{US 8384711 B2}{Filed 11/06, Issued 2/2013}
+
+\cvbibitem
+{Ray Tracing A Three-Dimensional Scene using A Hierarchical Data Structure}
+{Ingo Wald, Peter Shirley \und Solomon Boulos}
+{US 8259105 B2 / US 20100060634 A1}
+{Filed 7/2007, Issued 9/2012}
+
+\cvbibitem
+{Parallel Grid Population}
+{Ingo Wald and Thiago Ize}
+{WO 2008067490 A2}
+{Filed 11/2007, Issued 6/2008}
+
+\cvbibitem
+{Method and device for creating a two-dimensional representation of a three dimensional world}
+{J\"org Schmittler, Ingo Wald, \und Philipp Slusallek}
+{US Patent Number 7289118}{Universtit\"at des Saarlandes \und Garching Innovation Technologien
+      aus der Max-Planck Gesellschaft. Filed Aug 20, 2003; Issued Oct 30, 2007}{}
+
+
+\closesection
+\medskip
+
+
+% =======================================================
+\section{Books \& Proceedings (edited)}
+
+\cvbibitem
+{High-Performance Graphics 2014}{Ingo Wald and Jonathan Ragan-Kelley, editors}{}{}
+
+\cvbibitem
+{Proceedings of the 2006 IEEE Symposium on Interactive Ray
+  Tracing}{Ingo Wald and Steven G.\ Parker, editors}{}{IEEE Computer Society Press, ISBN 1-4244-0693-5, 2006}
+
+
+\closesection
+%\medskip
+\vspace{-1ex}
+
+
+% =======================================================
+\section{Book Chapters}
+
+\cvbibitem
+{Chapter 21 -- High Performance Ray Tracing}{Gregory S. Johnson, Ingo Wald, Sven Woop, Carsten Benthin, and Manfred Ernst}{in \emph{High Performance Parallelism Pearls: Multicore and Many-core Programming Approaches}, James Reinders and Jim Jeffers (editors), Morgan Kaufman}{2015}
+
+\closesection
+
+\vspace{-1ex}
+% =======================================================
+\section{Company-Internal Papers and Whitepapers}
+
+% -------------------------------------------------------
+  \cvbibitem 
+    {(confidential, intentionally omitted)}
+    {}
+    {}{}
+
+\vspace{-1ex}
+% =======================================================
+\section{Journal Articles (peer reviewed)}
+
+% -------------------------------------------------------
+  \cvbibitem {An Evaluation of Existing BVH Traversal Algorithms for Efficient Multi-Hit Ray Tracing}
+{Jefferson Amstutz, Christiaan Gribble, Johannes Guenther, and Ingo Wald}
+{Journal of Computer Graphics Techniques}{2015 (to appear)}
+  
+% -------------------------------------------------------
+  \cvbibitem 
+    {Embree--A 
+ Kernel Framework for Efficient CPU Ray Tracing}
+    {Ingo Wald, Sven Woop, Carsten Benthin, Gregory S. Johnson, and Manfred Ernst}
+    {ACM Transactions on Graphics (Proceedings of ACM SIGGRAPH)}{2014}
+
+% -------------------------------------------------------
+  \cvbibitem 
+    {RBF Volume Ray Casting on Multicore and Manycore CPUs}
+    {Aaron Knoll, Ingo Wald, Paul Navratil, Anne Bowen, Khairi Reda, Michael E Papka, and Kelly P Gaither}
+    {Computer Graphics Forum (Proceedings of EuroVis)}{2014 (to appear)}
+
+% -------------------------------------------------------
+  \cvbibitem 
+    {Water-tight Ray-Triangle Intersection}
+    {Sven Woop, Carsten Benthin, Ingo Wald}
+    {Journal of Computer Graphics Techniques}{2013}
+
+% -------------------------------------------------------
+  \cvbibitem 
+    {Combining Single and Packet Ray Tracing for Arbitrary Ray Distributions on the Intel\textsuperscript\textcopyright MIC Architecture}
+    {Carsten Benthin, Ingo Wald, Sven Woop, Manfred Ernst, William R. Mark}
+    {IEEE Transactions on Visualization and Computer Graphics}{2012}
+
+% -------------------------------------------------------
+  \cvbibitem 
+    {Fast Construction of SAH BVHs on the Intel\textsuperscript\textcopyright Many Integrated Core (MIC) Architecture}
+    {Ingo Wald}
+    {IEEE Transactions on Visualization and Computer Graphics}{2011}
+
+
+% -------------------------------------------------------
+  \cvbibitem 
+    {State of the Art in Ray Tracing Animated Scenes}{Ingo Wald,
+    William R Mark, Johannes G\"unther, Solomon Boulos, Thiago Ize,
+    Warren Hunt, Steven G.\ Parker, and Peter Shirley}{Computer Graphics Forum}{Volume 28, Number 6, 2009}
+
+
+
+% -------------------------------------------------------
+\cvbibitem{Sequential Monte Carlo Adaption in Low-Anisotropy Participating Media} {Vincent Pegoraro, Ingo Wald, \und Steven G Parker}{Computer Graphics Forum (Proceedings of the 2008 Eurographics Symposium on Rendering)}
+{2008}
+
+
+% -------------------------------------------------------
+\cvbibitem{Coherent Multiresolution Isosurface Ray Tracing} {Aaron
+  Knoll, Charles D Hansen, \und Ingo Wald}{The Visual Computer
+}{Volume 25, Number 3, March 2009}
+
+% -------------------------------------------------------
+\cvbibitem{Fast, Parallel, and Asynchronous Construction of BVHs for
+  Ray Tracing Animated Scenes} { Ingo Wald, Thiago Ize, \und Steven
+  G.\ Parker}{Computers and Graphics}{Volume 32, Number 1, Feb 2008}
+
+
+% -------------------------------------------------------
+\cvbibitem{Exploring a Boeing 777 -- Ray Tracing Large-Scale CAD Data}
+          { Andreas Dietrich, Abe Stephens, \und Ingo Wald}{IEEE
+            Computer Graphics and Applications}{Volume 27, Issue 6,
+            (November 2007), pages 36--46}
+
+% -------------------------------------------------------
+\cvbibitem{Interactive Isosurface Ray Tracing of Time-Varying
+  Tetrahedral Volumes} { Ingo Wald, Heiko Friedrich, Aaron Knoll, \and
+  Charles D.\ Hansen}{IEEE Transactions on Visualization and Computer
+  Graphics}{(Proceedings of IEEE Visualization/InfoVis 2007), Volume
+  13, Issue 6 (November 2007), pages 1727-1734}
+
+% -------------------------------------------------------
+\cvbibitem{A Coherent Grid Traversal Approach to Visualizing
+  Particle-based Simulation Data}
+{Christiaan P.\ Gribble, Thiago Ize, Ingo Wald, Andrew E.\ Kensler, \und
+  Steven G.\ Parker}{IEEE Transactions
+on Visualization and Computer Graphics 13(4), 2007}{}%{pages~758--768} 
+
+%(to appear, meanwhile available as SCI Institute, University of Utah,
+%  Technical Report No UUSCI-2006-024)
+
+% -------------------------------------------------------
+\cvbibitem{Ray Tracing
+  Deformable Scenes using Dynamic Bounding Volume
+  Hierarchies}{Ingo Wald, Solomon Boulos, \und Peter Shirley}{ACM Transactions on
+  Graphics 26(1), 2007}{pages~1--18}
+
+% -------------------------------------------------------
+\cvbibitem{Ray Tracing Animated Scenes using Coherent Grid
+  Traversal}{Ingo Wald, Thiago Ize, Andrew E Kensler, Aaron Knoll, \und Steven G
+  Parker}{ACM Transactions on
+  Graphics 25(3), 2006}{pages~485-493, (Proceedings of ACM SIGGRAPH 2006)}
+
+% -------------------------------------------------------
+\cvbibitem{Realtime Ray Tracing for Advanced Visualization
+in the Aerospace Industry}{Andreas Dietrich, Ingo Wald, Holger Schmidt,
+Kristian Sons, and
+Philipp Slusallek
+}{Proceedings of the 5th Paderborner Workshop Augmented und Virtual Reality in der Produktentstehung
+}{}
+
+% -------------------------------------------------------
+  \cvbibitem{Ray Tracing Animated Scenes using
+    Motion Decomposition}{Johannes Günther, Heiko Friedrich, Ingo Wald, Hans-Peter
+    Seidel, \und Philipp Slusallek}{Computer Graphics Forum 25(3), 
+     2006}{\pages~517--525  (Proceedings EUROGRAPHICS 2006)}
+
+% -------------------------------------------------------
+\cvbibitem{Techniques for
+  Interactive Ray Tracing of B\'ezier Surfaces}{Carsten Benthin, Ingo Wald, \und Philipp Slusallek}{Journal of Graphics
+  Tools 11(2), 2006}{\pages~1--16}
+
+% -------------------------------------------------------
+  \cvbibitem{Faster Isosurface Ray Tracing using
+      Implicit KD-Trees}{Ingo Wald, Heiko Friedrich, Gerd Marmitt, Philipp Slusallek,
+    \und Hans-Peter Seidel}{IEEE Transactions on Visualization and
+    Computer Graphics 11(5), 2005}{\pages~562--572}
+
+% -------------------------------------------------------
+  \cvbibitem{Balancing Considered Harmful -- Faster Photon Mapping using the
+      Voxel Volume Heuristic}{ Ingo Wald, Johannes G\"unther, \and Philipp Slusallek}{Computer Graphics Forum 22(3), 2004}{
+\pages~595--603,    (Proceedings of EUROGRAPHICS)}
+%\ende{Aug 30--Sep 3,}{30. August -- 3.  September,} 2004, 
+
+% -------------------------------------------------------
+  \cvbibitem{A
+      Scalable Approach to Interactive Global Illumination}{ Carsten Benthin, Ingo Wald, \und Philipp Slusallek}{Computer
+    Graphics Forum 22(3), 2003}{
+    \pages~621--630,
+ (Proceedings of EUROGRAPHICS)}
+
+% -------------------------------------------------------
+\cvbibitem{Interactive Distributed Ray Tracing on Commodity PC Clusters --
+  State of the Art and Practical Applications}{ Ingo Wald, Carsten Benthin, Andreas Dietrich, \und Philipp Slusallek}{Harald Kosch, Laszlo
+  B\"osz\"ormenyi, \und Hermann Hellwagner, editors, \emph{Euro-Par
+    2003}, volume 2790 of \emph{Lecture Notes in Computer Science}}{
+  \pages~499--508, Springer, 2003}
+
+% -------------------------------------------------------
+  \cvbibitem{Interactive Rendering with Coherent Ray-Tracing}
+{Ingo Wald, Carsten Benthin, Markus Wagner, \und Philipp
+    Slusallek}{Computer Graphics Forum 20(3), 2001}{
+    \pages~153--164, (Proceedings of EUROGRAPHICS 2001)}
+%Manchester, UK, \ende{Sep 3--7,}{3.--7.~September,} 
+\closesection
+
+
+
+
+\medskip
+% =======================================================
+\section{Articles in Conference Proceedings  (peer reviewed)}
+
+
+% -------------------------------------------------------
+  \cvbibitem 
+    {CPU Ray Tracing Large Particle Data with Balanced P-k-d Trees}
+    {Ingo Wald, Aaron Knoll, Gregory P Johnson, Will Usher, Valerio Pascucci, and Mike E Papka}
+    {Proceedings of IEEE Visualization}{2015}
+
+% -------------------------------------------------------
+  \cvbibitem 
+    {Efficient Ray Tracing of Subdivision Surfaces using Tessellation Caching}
+    {Carsten Benthin, Sven Woop, Matthias Niessner, Kai Selgard, and Ingo Wald}
+    {Proceedings of High Performance Graphics}{2015}
+
+% -------------------------------------------------------
+  \cvbibitem 
+    {SIMD Parallel Ray Tracing of Homogeneous Polyhedral Grids}
+    {Brad Rathke, Ingo Wald, Kenneth Chiu, and Carson Brownlee}
+    {Eurographics Symposium on Parallel Graphics and Visualization (EGPGV)}{2015}
+
+% -------------------------------------------------------
+  \cvbibitem 
+    {Ray Tracing and Volume Rendering Large Molecular Data on Multi-core and Many-core Architectures}
+    {Aaron Knoll, Ingo Wald, Paul Navratil, Michael E Papka, and Kelly P Gaither}
+    {Proc. 8th International Workshop on Ultrascale Visualization at SC13 (Ultravis)}{2013}
+
+\cvbibitem{Extending a C like Language for Portable SIMD Programming}
+{Roland Leissa, Sebastian Hack, and Ingo Wald}
+{PPoPP '12: Proceedings of the 17th ACM SIGPLAN symposium on Principles and Practice of Parallel Programming 2012}
+{}
+
+% -------------------------------------------------------
+\cvbibitem
+{Full-Resolution Interactive CPU Rendering
+with Coherent BVH Traversal}
+{
+Aaron Knoll, 
+Sebastian Thelen,
+Ingo Wald,
+Charles D Hansen,
+Hans Hagen,
+Machael E Papka}
+{Proceedings of IEEE Pacific Visualization 2011}
+{}
+
+% -------------------------------------------------------
+\cvbibitem{Active Thread Compaction for GPU Path Tracing}
+{Ingo Wald}
+{Proceedings of High Performance Graphics 2011}
+{}
+
+% -------------------------------------------------------
+\cvbibitem{Efficient Stack-less Traversal Algorithm for Ray Tracing with BVH}
+{M Hapala, T Davidoviv, I Wald, V Havran, P Slusallek}
+{Proceedings of SCCG 2011}
+{pages 29--34}
+
+% -------------------------------------------------------
+\cvbibitem{Efficient ray traced soft shadows using multi-frusta tracing}
+ {Carsten Benthin and Ingo Wald}
+{In 
+Proceedings of High-Performance Graphics 2009 (HPG09)}{}
+
+
+% -------------------------------------------------------
+\cvbibitem {Getting Rid of Packets -- SIMD Single-Ray Traversal using Multi-Branching BVHs}
+{
+Ingo Wald, Carsten Benthin, Solomon Boulos
+} {In Proceedings of the 2008
+  IEEE/Eurographics Symposium on Interactive Ray Tracing}{Los Angeles, 2008}
+
+% -------------------------------------------------------
+\cvbibitem {Adaptive Ray Packet Reordering}{
+Solomon Boulos, Ingo Wald, Carsten Benthin
+} {In Proceedings of the 2008
+  IEEE/Eurographics Symposium on Interactive Ray Tracing}{Los Angeles, 2008}
+
+% -------------------------------------------------------
+\cvbibitem {Ray Tracing with the BSP Tree}{
+Thiago Ize, Ingo Wald, Steven Parker
+} {In Proceedings of the 2008
+  IEEE/Eurographics Symposium on Interactive Ray Tracing}{Los Angeles, 2008}
+
+% -------------------------------------------------------
+\cvbibitem {On Fast Construction of SAH based Bounding Volume
+  Hierarchies}{Ingo Wald} {In Proceedings of the 2007
+  IEEE/Eurographics Symposium on Interactive Ray Tracing}{Ulm,
+  Germany, 2007}
+
+
+% -------------------------------------------------------
+\cvbibitem {Interactive Ray Tracing of Arbitrary Implicits with SIMD Interval Arithmetic}
+{Aaron Knoll, Charles D.\ Hansen, Younis Hijazi, Hans Hagen, \und Ingo Wald}{In Proceedings of the 2007 IEEE/Eurographics Symposium on Interactive
+    Ray Tracing}{}
+
+
+% -------------------------------------------------------
+    \cvbibitem{Interactive Iso-Surface Ray Tracing of Massive
+    Volumetric Data Sets}
+{Heiko Friedrich, Ingo Wald, and Philipp Slusallek}{Eurographics Symposium on Parallel Graphics and
+    Visualization '07}{}
+
+% -------------------------------------------------------
+    \cvbibitem {Asynchronous BVH Construction for Ray Tracing Dynamic
+    Scenes}{Thiago Ize, Ingo Wald, \and Steven G.\ Parker}{Eurographics Symposium on Parallel Graphics and
+    Visualization '07}{}
+
+% -------------------------------------------------------
+\cvbibitem {Packet-based Whitted and Distribution Ray Tracing}
+{Solomon Boulos, Dave Edwards, J.\ Dylan Lacewell, Joe Kniss, Jan Kautz,
+  Ingo Wald, \und   Peter Shirley}{Graphics Interface 2007}{(to appear)}
+
+% -------------------------------------------------------
+\cvbibitem {Interactive
+  Isosurface Ray 
+  Tracing of Large Octree Volumes}
+{Aaron Knoll, Ingo Wald, Steven G.\ Parker, \und Charles D.\
+  Hansen}{\proc the 2006 IEEE  Symposium on Interactive Ray Tracing}{
+Salt Lake City, UT, 
+%Sep~18--20, 
+2006,
+\pages~115--124}
+
+% -------------------------------------------------------
+\cvbibitem {Realtime Ray Tracing on the CELL Processor}
+{Carsten Benthin, Ingo Wald, Michael Scherbaum, \und Heiko Friedrich}
+  {\proc the 2006 IEEE  Symposium on Interactive Ray Tracing}{Salt
+    Lake City, UT, Sep~18--20, 2006, \pages~15--23}
+
+% -------------------------------------------------------
+\cvbibitem {An Evaluation of Parallel Grid Construction for Ray Tracing Dynamic Scenes}
+{Thiago Ize, Ingo Wald, Chelsea Robertson, \und Steven G Parker}
+{\proc the 2006 IEEE  Symposium on Interactive Ray Tracing}{Salt
+  Lake City, UT, Sep~18--20, 2006, \pages~47--55}
+
+% -------------------------------------------------------
+\cvbibitem{Applying Ray Tracing for Virtual Reality and Industrial
+  Design}
+{ Ingo Wald, Andreas Dietrich, Carsten Benthin, Alexander Efremov, Tim Dahmen, Johannes G\"unther,
+  Vlastimil Havran, Hans-Peter Seidel, \und Philipp Slusallek}{
+  \proc the 2006 IEEE Symposium on Interactive Ray Tracing}{Salt Lake City, UT, Sep~18--20, 2006,
+\pages~177--185}
+
+% -------------------------------------------------------
+\cvbibitem{On building good KD-Trees for Ray
+  Tracing, and on doing that in O(N~log~N)}{ Ingo Wald \und Vlastimil Havran}{
+  \proc the 2006 IEEE  Symposium on Interactive Ray Tracing}{Salt Lake City, UT, Sep~18--20, 2006,
+\pages~61--69}
+
+% -------------------------------------------------------
+\cvbibitem{An Application of
+  Scalable Massive Model Interaction using Shared Memory Systems}
+{ Abe Stephens, Solomon Boulos, \und Ingo Wald}{
+  \proc EUROGRAPHICS Symposium on Parallel Graphics and Visualization}{Braga, Portugal, 
+  11.--12.~\may 2006, \pages~19--26}
+
+% -------------------------------------------------------
+  \cvbibitem{
+      Large-Scale CAD Model Visualization on a Scalable Shared-Memory
+      Architecture}{ Andreas Dietrich, Ingo Wald, \und Philipp Slusallek}{\proc Vision, Modeling, and
+    Visualization (VMV) 2005}{\pages~303--310, Erlangen, Germany, November 16--18, 2005}
+
+% -------------------------------------------------------
+\cvbibitem{{Efficient} {Acquisition} and {Realistic} {Rendering} of
+  {Car} {Paint}}
+{ Johannes G{\"u}nther, Tongbo Chen, Michael Goesele, Ingo Wald, \und Hans-Peter Seidel}
+{\proc Virtual Reality, Modeling, and Visualization
+  (VMV) 2005}{\pages~487--494, Erlangen, Germany, November 16--18, 2005}
+
+% -------------------------------------------------------
+\cvbibitem {{Interactive} {Ray} {Tracing} of
+{Point} {Based} {Models}}
+{Ingo Wald \und Hans-Peter Seidel}{Proceedings of 2005 Symposium on
+Point Based Graphics}{
+%Long Island, NY, USA, 
+2005}
+
+% -------------------------------------------------------
+  \cvbibitem{
+      Interactive Ray Tracing of Free-Form Surfaces}{ Carsten Benthin, Ingo Wald, \und Philipp Slusallek}{ \proc Afrigraph
+      2004}{\pages 99--106, Stellenbosch, ZA, \ende{Nov 3--5}{3.--5.\ November},
+      2004}
+
+% -------------------------------------------------------
+  \cvbibitem{An
+      Interactive Out-of-Core Rendering Framework for Visualizing
+      Massively Complex Models}
+{ Ingo Wald, Andreas Dietrich, \und Philipp Slusallek}{In Rendering Techniques 2004, 
+    EUROGRAPHICS Symposium on Rendering}{\pages~81--92, Norrk{\"o}ping,
+      Sweden, \ende{June 21--23}{21.--23.
+    Juni}, 2004}
+
+% -------------------------------------------------------
+  \cvbibitem {
+      Realtime Caustics using Distributed Photon Mapping}{Johannes G\"unther, Ingo Wald, \und Philipp Slusallek}{\in
+    Rendering Techniques 2004, EUROGRAPHICS Symposium on Rendering}{\pages~111--121
+    Norrk{\"o}ping, Sweden, \ende{June 21--23}{21.--23. Juni}, 2004}
+
+% -------------------------------------------------------
+  \cvbibitem{VRML Scene Graphs on an Interactive Ray Tracing
+      Engine}{ Andreas Dietrich, Ingo Wald, Markus Wagner, \und Philipp
+    Slusallek}{\proc IEEE VR 2004}{ \pages~109--116, Chicago, USA,
+    \ende{Mar 27--31,}{27.-31.
+    März,} 2004}
+
+% -------------------------------------------------------
+\cvbibitem {Fast and Accurate Ray-Voxel Intersection Techniques for Iso-Surface
+  Ray Tracing}{Gerd Marmitt, Andreas Kleer, Ingo Wald, Heiko Friedrich, \und Philipp Slusallek}{ \proc Virtual Reality, Modelling, and Visualization
+    (VMV) 2004}{ \pages~429--435,  2004}
+
+
+% -------------------------------------------------------
+  \cvbibitem{
+      Distributed Interactive Ray Tracing of Dynamic Scenes}{
+ Ingo Wald, Carsten Benthin, \und Philipp Slusallek}{\in
+    Proceedings of the IEEE Symposium on Parallel and Large-Data
+    Visualization and Graphics (PVG)}{ \pages~77--86, Blaubeuren,
+      Germany, \ende{Sep 9--10,}{9.-10.\ September,} 2003}
+
+
+% -------------------------------------------------------
+  \cvbibitem
+    {Streaming Video Textures for Mixed Reality Applications in
+      Interactive Ray Tracing Environments}
+{ Andreas Pomi, Gerd Marmitt, Ingo Wald, \und Philipp Slusallek}{ \proc Vision, Modeling and
+    Visualization (VMV) 2003}{ \pages~261-269, 
+%Munich, 
+Germany,
+    \ende{Nov 19--21}{19.-21. November}, 2003}
+
+% -------------------------------------------------------
+  \cvbibitem{
+      Interactive Global Illumination in Complex and Highly Occluded
+      Environments}{ Ingo Wald, Carsten Benthin, \und Philipp Slusallek}{Proceedings of the 14th EUROGRAPHICS Workshop
+      on Rendering}{P.~H.~Christensen and D.~Cohen-Or (editors),
+      \pages~74--81, Leuven, Belgium, 2003}
+
+% -------------------------------------------------------
+  \cvbibitem{The
+      OpenRT Application Programming Interface - Towards A Common API
+      for Interactive Ray Tracing}{
+ Andreas Dietrich, Ingo Wald, \und Philipp Slusallek}{Proceedings of the 2003 OpenSG
+    Symposium}{\pages~23--31, Darmstadt, Germany, \ende{Apr 1--2}{1.--2. April}, 2003}
+
+
+% -------------------------------------------------------
+  \cvbibitem{SaarCOR
+      - A Hardware Architekture for Ray Tracing}
+{ J\"org Schmittler, Ingo Wald, \und Philipp Slusallek}{ \proc
+    ACM SIGGRAPH/EUROGRAPHICS Graphics Hardware 2002}{\pages~27--36, Saarbrücken,
+    Germany, \ende{Sep 1--2}{1.-2. September}, 2002}
+
+% -------------------------------------------------------
+  \cvbibitem{Interactive Headlight Simulation - A Case Study for
+      Interactive Distributed Ray Tracing}
+{ Carsten Benthin, Tim Dahmen, Ingo Wald, \und Philipp Slusallek.
+    }{ \proc
+    EUROGRAPHICS Workshop on Parallel Graphics and Visualization (PGV)}{ \pages~81--88,
+    Seattle, WA, \ende{Oct 20--21}{20.--21.\ Oktober}, 2002}
+
+% -------------------------------------------------------
+  \cvbibitem{Interactive Global Illumination using
+      Fast Ray Tracing}
+{ Ingo Wald, Thomas Kollig, Carsten Benthin, Alexander Keller,
+    \und Philipp Slusallek}{Proceedings of the 13th EUROGRAPHICS
+    Workshop on Rendering}{P.~Debevec and S.~Gibson
+  (editors), \pages~15--24, Pisa, Italy, 2002}
+
+
+
+% -------------------------------------------------------
+  \cvbibitem {
+      Interactive Distributed Ray-Tracing of Highly Complex Models}
+{Ingo Wald, Philipp Slusallek \und Carsten Benthin}{ Rendering Techniques 2001 / Proceedings of the EUROGRAPHICS
+      Rendering Workshop 2001}{S.J.~Gortler \und K.~Myszkowski
+      (editors), \pages~274--285, 
+%London, UK, 
+\ende{Jun}{Juni} 2001}
+
+% -------------------------------------------------------
+\cvbibitem{Efficient Importance Sampling Techniques
+  for the Photon Map}{ Alexander Keller \und Ingo Wald}{\proc Vision
+  Modelling and
+ Visualization    (VMV)}{Saarbr\"ucken, Germany, \ende{Nov}{November} 2000}
+%
+\closesection
+
+
+
+
+
+\newpage
+\medskip
+% =======================================================
+\section{State of the Art Reports (peer reviewed)}
+
+% -------------------------------------------------------
+  \cvbibitem 
+    {State of the Art in Ray Tracing Animated Scenes}{Ingo Wald,
+    William R Mark, Johannes G\"unther, Solomon Boulos, Thiago Ize,
+    Warren Hunt, Steven G.\ Parker, and Peter Shirley}{EUROGRAPHICS
+    2007 State of the Art Reports}{Prague, Czech Republic, 2007}
+
+
+% -------------------------------------------------------
+  \cvbibitem 
+    {Realtime Ray Tracing and its use for Interactive Global
+      Illumination}{Ingo Wald, Timothy J.\
+    Purcell, J\"org Schmittler, Carsten Benthin, \und Philipp Slusallek}{EUROGRAPHICS 2003 State of the Art Reports}{Granada, Spain, 2003}
+
+
+% -------------------------------------------------------
+  \cvbibitem {State-of-the-Art in Interactive Ray
+      Tracing}{Ingo Wald \und
+    Philipp Slusallek}{ EUROGRAPHICS 2001 State of the Art Reports}{EUROGRAPHICS,
+%Manchester, UK, 
+2001}
+
+\closesection
+
+
+\medskip
+%\pagebreak
+% =======================================================
+\section{Refereed Tutorials and  Courses at Conferences}
+
+% -------------------------------------------------------
+\cvbibitem{ACM SIGGRAPH 2013 Course on the Future of Ray Tracing}{organized by Alexander Keller, NVidia}{ACM
+  SIGGRAPH 2013}{(to appear)}
+
+% -------------------------------------------------------
+\cvbibitem{ACM SIGGRAPH 2006 Course on Realtime Ray Tracing}{\mit Philipp
+  Slusallek, Peter Shirley (University of Utah), Bill Mark (University
+  of Texas), Gordon Stoll (INTEL), \und Dinesh Manocha (UNC)}{ACM
+  SIGGRAPH 2006}{Boston, USA, 2006}
+
+% -------------------------------------------------------
+\cvbibitem{ACM SIGGRAPH 2005 Course on Realtime Ray Tracing}{\mit Philipp
+  Slusallek, Peter Shirley (University of Utah), Bill Mark (University
+  of Texas), \und Gordon Stoll (INTEL)}{ACM SIGGRAPH 2005}{Los Angeles, USA, 2005}
+
+% -------------------------------------------------------
+\cvbibitem{Afrigraph 2004 Course on Massive Model Visualization}{\mit
+  Andreas Dietrich}{Afrigraph 2004}{Stellenbosch, South Africa, 2004}
+
+
+% -------------------------------------------------------
+\cvbibitem{ACM SIGGRAPH 2003 Course on Global Illumination for High-Quality
+  Animations and Interactive Applications}{\mit Karol
+  Myszkowski, Cyrille Damez, Per H. Christensen, Bruce Walter, \und
+  Philipp Slusallek}{ACM SIGGRAPH 2003}{
+Los Angeles, 
+USA, 
+2003}
+
+% -------------------------------------------------------
+\cvbibitem{Afrigraph 2003 Course on Advanced Issues in Realtime Ray
+  Tracing and Interactive Global Illumination}{\mit Carsten
+  Benthin}{Afrigraph 2003}{Cape Town, South Africa, 2003}
+
+
+% -------------------------------------------------------
+\cvbibitem{Afrigraph 2001 Course on Interactive Ray Tracing}{Ingo
+  Wald}{Afrigraph 2001}{Cape Town, South Africa, 2001}
+
+
+\closesection
+
+
+\medskip
+% =======================================================
+\section{Masters and Doctoral Theses}
+
+% -------------------------------------------------------
+\cvbibitem {Realtime Ray Tracing and Interactive Global
+  Illumination}{Ingo Wald}{PhD thesis}{Saarland University, 2004
+% (available at
+%  http://www.sci.utah.edu/~wald/PhD). 
+\ende{(Grade: with distinction)}{\\ Note: mit Auszeichnung}}
+
+% -------------------------------------------------------
+\cvbibitem{Photorealistic Rendering using the Photon Map}{Ingo Wald}{
+  Diplomarbeit\ende{ (masters thesis)}{}}{Universit\"at
+  Kaiserslautern, 1999. Grade: sehr gut (A equivalent)}
+
+\closesection
+
+
+
+
+
+
+
+
+%\medskip
+%% =======================================================
+%\section{Articles currently submitted for peer review}
+
+
+% -------------------------------------------------------
+%\cvbibitem{Fast Ray Tracing of Catmull-Clark Subdivision Surfaces}
+%{Carsten Benthin, Solomon Boulos, Jesse Dylan Lacewell, and Ingo Wald}{}{}
+
+% -------------------------------------------------------
+%\cvbibitem{Exploring a Boeing~777 -- Ray Tracing Large-Scale CAD Data}
+%{ Andreas Dietrich, Abe Stevens, Ingo Wald, Dave Kasik, \and Philipp Slusallek}{}{}
+
+
+%% -------------------------------------------------------
+%\cvbibitem {Interactive Ray Tracing of Arbitrary Implicits}
+%{Aaron Knoll, Charles D.\ Hansen, Younis Hijazi, Hans Hagen, \und Ingo Wald}{}{
+%\meanwhileavailable SCI Institute, University of Utah, Technical Report
+%No UUSCI-2007-002}
+
+
+
+%\medskip
+\newpage
+% =======================================================
+\section{Technical Reports (if not mentioned otherwise)}
+
+\cvbibitem{Screen-Space Spherical Harmonics Filters for Instant Global Illumination}
+{Benjamin Segovia and Ingo Wald}{Intel Corp}{2009}
+
+\cvbibitem{Fast Ray Tracing of Catmull-Clark Subdivision Surfaces}
+{Carsten Benthin, Solomon Boulos, Jesse Dylan Lacewell, and Ingo Wald}{SCI Institute, University of Utah}{2007}
+
+\cvbibitem{SIMD Stream Tracing --- SIMD Ray Traversal with Generalized Ray Packets
+and On-the-fly Reordering}{Ingo Wald}{SCI Institute, University of Utah}{2007}
+
+% -------------------------------------------------------
+%\cvbibitem{Coherent Multiresolution Isosurface Ray Tracing}
+%{ Aaron Knoll, Charles D Hansen, \und Ingo Wald}{}{
+%available SCI Institute, University of Utah, Technical Report
+%No UUSCI-2007-001} 
+
+% -------------------------------------------------------
+\cvbibitem{Geometric and Arithmetic Culling Methods for Entire Ray
+Packets}{  Solomon Boulos, Ingo Wald, \und Peter Shirley}{Technical
+  Report No.\ UUCS-06-010}{School of Computing, University of Utah, 2006}
+
+% -------------------------------------------------------
+\cvbibitem{Interactive Distribution Ray Tracing.}
+{ Solomon Boulos, David Edwards, Jesse Dylan Lacewell, Joe Kniss, Jan
+  Kautz, Peter Shirley, \und Ingo Wald}
+{
+Technical Report No.\ UUSCI-2006-022}{SCI Institute, University of Utah, 2006}
+
+% -------------------------------------------------------
+\cvbibitem{Ray Tracing
+    Deformable Scenes using Bounding Volume Hierarchies}
+{ Ingo Wald, Solomon Boulos, \und Peter Shirley}{Technical Report No.\ UUSCI-2006-023}{SCI Institute,
+  University of Utah. 2006.  (more detailed version
+  of \emph{ACM Transactions on
+    Graphics}, 26 (1), 2007)}
+
+
+\cvbibitem {Discretized Incident Radiance Maps for Interactive
+  Global Illumination in Complex Environments}{Ingo Wald}{Technical Report No.\ UUSCI-2005-010}{SCI Institute, University of Utah. 2005}
+
+
+\cvbibitem {Towards Realtime Ray Tracing---Issues and Potential}
+{Ingo Wald, Carsten Benthin, \und Philipp Slusallek}{Technical Report}{
+Saarland University. 2003}
+
+\cvbibitem {{OpenRT}---{A} {Flexible} and {Scalable} {Rendering}
+ {Engine} for {Interactive} {3D} {Graphics}} {Ingo Wald, Carsten
+ Benthin, \und Philipp Slusallek}{Technical Report}{Saarland
+ University. 2002}
+% available at http://graphics.cs.uni-sb.de/Publications
+
+
+\cvbibitem{Interactive Raytracing on Notebooks}{Ingo Wald, Philipp Slusallek, Carsten Benthin, \und Markus Wagner}{Technical Report}{Saarland
+ University. 2002}
+
+\closesection
+
+
+
+
+\medskip
+% =======================================================
+\section{ACM SIGGRAPH Sketches and Tech Talks, peer-reviewed}
+
+% -------------------------------------------------------
+\cvbibitem{Embree 2.0: A Real-time Ray Tracing Infrastructure for Xeon and Xeon PHI}{With Louis Feng, Sven Woop, and Carsten Benthin}{ACM SIGGRAPH Tech Talks (peer reviewed)}{2013}{}
+
+% -------------------------------------------------------
+\cvbibitem{{Interactive} {Ray} {Tracing} of
+  {Point} {Based} {Models}}{ Ingo Wald \und Hans-Peter Seidel}{ACM SIGGRAPH Sketches and
+  Applications}{2005}
+
+% -------------------------------------------------------
+\cvbibitem {{Precomputed} {Light} {Sets} for {Fast}
+  {High} {Quality} {Global} {Illumination}}{Johannes G\"unther, Ingo Wald, \und Hans-Peter Seidel}
+   {ACM SIGGRAPH Sketches and Applications}{2005}
+
+% -------------------------------------------------------
+\cvbibitem {{Interactive}
+  {Visualization} {of} {Exceptionally} {Complex} {Industrial}
+  {Datasets}}{Andreas Dietrich, Ingo Wald, \und Philipp Slusallek}{{ACM} {SIGGRAPH} {Sketches} {and}
+    {Applications}}{2004}
+
+
+\closesection
+
+
+\medskip
+% =======================================================
+\section{Other Publications and Invited Papers}
+
+% -------------------------------------------------------
+\cvbibitem{SIMD Stream Tracing -- SIMD Ray Tracing with Generalized
+  Packets and On-the-fly Re-ordering}
+{ Ingo Wald}{}{Poster at the 2007 IEEE/EG Symposium on Interactive Ray Tracing}
+
+% -------------------------------------------------------
+\cvbibitem {Realtime Ray Tracing and Interactive Global
+  Illumination}{Ingo Wald}
+{it--In\-for\-ma\-tion Technology}{ Nummer 4, 2006. \indeutsch}
+
+% -------------------------------------------------------
+\cvbibitem {Ray Tracing Animated Scenes--One Experiment and Three
+  Solutions}{Ingo Wald}
+{The Utah Teapot}{Fall 2006}
+
+% -------------------------------------------------------
+\cvbibitem{{Realtime} {Ray} {Tracing} and {Interactive} {Global}
+  {Illumination}}{Ingo Wald}{Aus\-ge\-zeich\-ne\-te Informatikdissertationen
+  2005}{Bonner K{\"o}llen Verlag, Dorothea Wagner et al.(eds), series
+  GI-Edition Lecture Notes in Informatics (LNI), 2005. \indeutsch}
+
+%\cvbibitem{inView/OpenRT Installation Guide and User Manual}{Ingo Wald
+%  and inTrace GmbH}{}{2002--2006}
+
+% -------------------------------------------------------
+\cvbibitem {Interaktive Beleuchtungssimulation
+ und Bildsynthese mit Ray-Tracing -- Effiziente Software schl\"agt
+ Spezial-Hardware}{Philipp Slusallek \und Ingo Wald}{Magazin For{\-}schung 1/2002 der Universit\"at
+ des Saarlandes}{ISSN 0937-7301, pages 2--12, \ende{May}{Mai} 2002 \indeutsch}
+
+\closesection
+
+
+
+
+
+
+%\pagebreak
+% =======================================================
+% =======================================================
+% =======================================================
+\bigskip
+\bigskip
+\bigskip
+\firstnamestyle{\Huge{Invited Talks and Presentations (selected)}}
+\vspace*{6mm}
+
+\section{}
+
+\cvownitem{Embree---A Ray Tracing Kernel Framework for Efficient CPU Ray Tracing}  {Graphics Seminar, University of Texas in Austix}{2014}
+
+\cvownitem{Ray Tracing for Interactive Rendering and Visualization:
+  Are we done, yet?}  {Keynote at the Eurographics Conference on
+  Parallel Graphics and Visualization (EGPGV) 2013}{}
+
+% -------------------------------------------------------
+\cvownitem{IVL--A experimental SPMD Compiler for SSE and MIC}
+{Intel VPG Tech Summit (MIC)}{Jan 2012, (best presentation award)}
+% -------------------------------------------------------
+\cvownitem{Active Thread Compaction for GPU Path Tracing}
+{Intel OpenCL Forum}{2011}
+% -------------------------------------------------------
+\cvownitem{IVL+R(IVL)--A experimental SPMD Compiler for SSE, AVX, and MIC, and its application to Real-Time Realistic Rendering}
+{Illinois-Intel Parallelism Center (I2PC) at the University of Illinois Urbana Champaign (UIUC)}{Oct 20, 2011}
+% -------------------------------------------------------
+\cvownitem{Fast Ray Tracing on LRB using Multi-Packet/Multi-Frustum Traversal}
+{Intel UPCRC Summit}{Oregon 2009 (best talk award)}
+% -------------------------------------------------------
+\cvownitem{Aggressive Packet-/Frustum Traversal Techniques -- State of
+the Art and Current Issues}
+{Eurographics IPC Minisymposium}{Prague, Czech Republic. April 2007}
+% -------------------------------------------------------
+\cvownitem{On ray tracing and future graphics architectures -- and how
+these two will influence each other}
+{NVidia Corp}{Santa Clara, CA, USA. Feb 2007}
+% -------------------------------------------------------
+%\cvownitem{Echtzeit Ray Tracing}{Universit\"at
+%  Magdeburg}{Germany, Dez 2006 \indeutsch}
+%
+% -------------------------------------------------------
+%\cvownitem{Realtime Ray Tracing}{University of Bath}{Bath, UK, Nov 2006}
+%
+%\vspace*{-1em}
+%
+% -------------------------------------------------------
+\cvownitem{Realtime Ray Tracing}{IBM TJ Watson}{Yorktown
+  Heights, 
+%NY,
+ Oct 2006}
+%
+\vspace*{-1em}
+%
+% -------------------------------------------------------
+\cvownitem{Realtime Ray Tracing}{University of Wales in
+  Bangor}{Bangor, Wales, UK, Sep 2006}
+%
+\vspace*{-1em}
+%
+% -------------------------------------------------------
+\cvownitem{Ray Tracing Dynamic Scenes -- Recent Progress, Current
+  Issues}{Intel Corp}{ Santa Clara, CA, USA, 2006}
+%
+% -------------------------------------------------------
+%% \cvownitem{Realtime Ray Tracing -- Progress and Issues}{
+%%   \ende{Research colloquium,}{Forschungskolloquium der} University of Utah}{Salt Lake City, UT, USA, 2006}
+%
+% -------------------------------------------------------
+\cvownitem{Recent Trends in Realtime Ray Tracing -- Practical
+  Applications, Complex Models, and Animated Scenes}{
+\ende{Invited Talk at the annual meeting of the advisory board of
+  german university professors}{
+  Gastvortrag beim GIBU-Jahrestreffen (GI Beirat der
+  Universit\"ats\-professoren)}}{
+%Dagstuhl, \ende{Germany,}{} 
+2006}
+%
+% -------------------------------------------------------
+\cvownitem{Ray Tracing Animated Scenes}{MPI f\"ur Informatik}{
+   Saarbr\"ucken, Germany, 2006}
+%
+\vspace*{-1em}
+%
+% -------------------------------------------------------
+\cvownitem{Realtime Ray Tracing and Interactive Global Illumination}{
+  \ende{Finalists round of the BMW Innovation Award}{Finalistenrunde des BMW Innovationspreises}}{BMW FIZ, M\"unchen, Germany, 
+  2005}
+%
+% -------------------------------------------------------
+\cvownitem{Realtime Ray Tracing and Interactive Global Illumination}{
+  \ende{Finalists round of the GI Dissertationspreis (Dissertation
+  Award of the German Association of Computer Scientists)}{Finalistenrunde des GI Dissertationspreises}}{Mainz, Germany, 2005}
+%
+%
+%% % -------------------------------------------------------
+%% \cvownitem ``Interaktive Visualisierung eines hoch komplexen Boeing 777
+%%   Modells'', Andreas Dietrich and Ingo Wald, Cover Image and Short
+%%   Article on Informatik Spektrum 22(4), pages 394--394, August 2004
+%
+%% % -------------------------------------------------------
+%% \cvownitem Cover Image on Proceedings of Parallel Graphics and Visualization 2003
+%
+% -------------------------------------------------------
+\cvownitem{Realtime Ray Tracing and Interactive Global Illumination}{
+%  Gastvortrag, 
+Stanford
+% University
+}{%Palo Alto, CA, 
+2002}
+%
+% -------------------------------------------------------
+\cvownitem{The Saarland RTRT/OpenRT Realtime Ray Tracing Project}{Intel Corp}{%
+%Santa Clara, CA, 
+2002}
+%
+% -------------------------------------------------------
+\cvownitem{Towards interactive Global Illumination}{Dagstuhl
+  Seminar}
+{%
+%Germany, 
+2001}
+%
+\cvownitem{Photorealistic Rendering using the Photon Map}{Dagstuhl
+  Seminar}{%
+%Dagstuhl, Germany, 
+2000}
+%
+\closesection
+
+
+%\pagebreak
+% =======================================================
+% =======================================================
+% =======================================================
+%\firstnamestyle{\Huge{Public Relations (selected)}}
+%\vspace*{6mm}
+
+%\section{}
+%\closesection
+
+
+%\pagebreak
+% =======================================================
+% =======================================================
+% =======================================================
+\bigskip
+\bigskip
+\bigskip
+\firstnamestyle{\Huge{Awards}}
+
+\vspace*{6mm}
+
+\section{}
+
+\cvownitem{HPG'15 ``Test of Time 2006'' Award}{(1st place)}{ 
+%High  Performance Graphics 2015, 
+for Wald and Havran, \emph{On Building
+    kd-Trees for Ray Tracing, and on doing that in O(N log N)}}{}
+
+\cvownitem{HPG'15 ``Test of Time 2006'' Award}{(2nd place)}{ 
+%High Performance Graphics 2015, 
+for Benthin et al, \emph{Ray Tracing on
+    the CELL processor}}{}
+
+\cvownitem{HPG'15 ``Wolfgang Strasser'' Best Paper Award}{}{ 
+%High Performance Graphics 2015, 
+for Benthin et al, \emph{Efficient Ray Tracing of Subdivision
+    Surfaces using Tessellation Caching}}{}
+
+\cvownitem{Intel Technical Computing Group (TCG) Recognition Award}{}{For the 
+creation and public release of Embree 2.0, Q3-2013}{}
+
+\cvownitem{Intel DRD Divisional Recognition Award}{SSG/DCSG (Software Solutions Group/Datacenter and Services Group)}{SC12 Keynote Demo of Dreamworks Xeon Phi App, Q1-2013}{}
+
+\cvownitem{Intel Divisional Recognition Award}{Microprocessor and Programming Research}{to Ingo Wald, For developing Embree 2.0 for Xeon Phi, demonstrating superior performance for photo-realistic rendering, transforming Dreamworks' lighting engine from tens of minutes-per-frame to near real-time, Q4-2012}{}
+
+\cvownitem{Best Presentation, 2nd prize -- Intel VCG Tech Summit 2012}
+{In recognition of the Best Presentation during the Intel VCG (Visual Computing Group) Tech Summit -- Spring 2012}{}{}{}
+
+\cvownitem{Intel Divisional Recognition Award}{Microprocessor and Programming Research Lab}{to Ingo Wald, for Demonstrating Intel Graphics Leadership with the first public live Advanced Graphics Demonstration on Larrabee, Q1-2010}{}
+
+\cvownitem{MIC (Larrabee) - Committed to a new Parallel Computing Roadmap}{to Ingo Wald}{Mai 2010}{}
+
+\cvownitem{Best Demo Award -- Intel VCG Tech Summit}
+{In recognition of the Best Demo during the Intel VCG (Visual Computing Group) Tech Summit -- Fall 2009}{}{}{}
+
+
+\cvownitem{Best Talk -- Intel UPCRC Summit}{for a talk on \emph{Fast
+    Ray Tracing on LRB using Multi-Packet Traversal}}{Beaverton, OR,
+  September 2009}{}
+
+
+\cvownitem{SaarLB Wissenschaftspreis 2004\ende{ (SaarLB Science Award
+      2004)}{}}
+{Science award of the Saarl\"andische Landesbank (endowed with
+25,000 Euros)}{for the dissertation \emph{Realtime Ray Tracing and
+Interactive Global Illumination}, 2005}
+
+\cvownitem{\ende{Finalists round of the BMW Innovation Award (5
+    Finalists)}{Endrunde des BMW Innovation Award (5 Finalisten)}}{BMW Group}
+{M\"unchen, July 2005,  \emph{Realtime Ray Tracing and Interactive Global Illumination}}
+%\cvownitem At Eurographics 2001 Conference, Manchester, GB, for the paper \textit{``Interactive Rendering with Coherent Ray Tracing''}.
+
+\cvownitem{Finalists round of the GI Dissertation Award 2004}
+{(Dissertation award of the German Association of Computer
+    Scientists)} 
+{Mainz, Germany, 2005}
+
+\cvownitem{Dr.-ing. ``mit Auszeichnung''\ende{ (PhD ``with
+    distinction'')}{}}
+{Universit\"at des Saarlandes}
+{
+\ende{For the dissertation}{f\"ur die Dissertation}
+  \emph{Realtime Ray Tracing and Interactive Global Illumination}}
+%\cvownitem At Eurographics 2001 Conference, Manchester, GB, for the paper \textit{``Interactive Rendering with Coherent Ray Tracing''}.
+
+\cvownitem{Best paper award}{(2nd place)}{
+ Eurographics 2001, \ende{for}{f\"ur} \emph{Interactive Rendering with
+ Coherent Ray Tracing}\ende{ (with over 500 scholar.google.com
+ citations to date)}{}}
+
+\cvownitem{HPCwire Editor's Choice Award}{awarded to the OpenRT Realtime Ray Tracer}{}{}
+%
+\cvownitem{European Innovation Prize}{awarded to inTrace GmbH}{}{}
+
+\closesection
+
+
+
+\bigskip
+\bigskip
+\bigskip
+
+
+%\pagebreak
+% =======================================================
+% =======================================================
+% =======================================================
+%\firstnamestyle{\Huge{Public Events}}
+
+%\vspace*{6mm}
+
+%r
+%\section{TODO}
+
+%\cvownitem{Intel Developer Forum 2009}{Ray Tracing Demo at IDF 2009}{September 2009}{}{}
+
+%to add here: idf demo, boeing demo, idf gelsinger demo, vw event
+
+%\closesection
+
+\bigskip
+\bigskip
+\bigskip
+
+
+
+\pagebreak
+% =======================================================
+% =======================================================
+% =======================================================
+
+\firstnamestyle{\Huge{Professional Service}}
+\vspace*{6mm}
+
+\section{Chair/Organizer Duty}
+\cvlistitem{
+Papers chair, High-Performance Graphics 2014}
+\cvlistitem{
+Papers chair, High-Performance Graphics 2009}
+\cvlistitem{
+Conference Chair, IEEE Symposium on Interactive Ray Tracing 2006}
+%
+%\closesection
+%
+%\section{Papers Co-Chair}
+%
+%\closesection
+%
+% =======================================================
+%\section{Co-organizer}
+%
+% -------------------------------------------------------
+\cvlistitem{
+Co-Organizer, ACM SIGGRAPH 2006 Course on Interactive Ray Tracing
+}
+\closesection
+
+% ``finance chair'' for RT07 ?
+
+% =======================================================
+\section{Committees}
+
+% -------------------------------------------------------
+\cvlistitem{
+Intel Labs Patent Committee
+}
+\cvlistitem{
+Selection Committee for the4 ``Intel Sponsored Sessions'' at ACM SIGGRAPH
+}
+\cvlistitem{
+Steering Committee, High Performance Graphics
+}
+\cvlistitem{
+Steering Committee, EG/ACM Symposium on Interactive Ray Tracing
+}
+\cvlistitem{
+Intel University Program Office (Implementation Task Force for the
+European University Programme - 'til 2013)
+}
+\closesection
+
+% =======================================================
+\section{\ende{Editorial Boards}{Editorial Boards}}
+
+\cvlistitem{
+Computer Graphics Forum
+%The Visual Computer 
+}
+\cvlistitem{
+Computers and Graphics
+%The Visual Computer 
+}
+\closesection
+
+
+% =======================================================
+\section{Programme Committees (selected)}
+
+% -------------------------------------------------------
+\cvlistitem{
+ High-Performance Graphics 2009--current
+}
+% -------------------------------------------------------
+\cvlistitem{
+Eurographics Symposium on Parallel Graphics and Visualization 2008--current
+}
+% -------------------------------------------------------
+\cvlistitem{
+Graphics Hardware 2008
+}
+% -------------------------------------------------------
+\cvlistitem{
+Eurographics 2007, 2009, 2010
+}
+% -------------------------------------------------------Afrigr
+\cvlistitem{
+Afrigraph 2004, 2007
+}
+% -------------------------------------------------------
+\cvlistitem{
+ IEEE Symposium on Interactive Ray Tracing 2006, 2007, 2008
+}
+% -------------------------------------------------------
+\cvlistitem{
+International Symposium on Visual Computing (ISVC) 2007, 2008
+}
+% -------------------------------------------------------
+\cvlistitem{
+Computer Graphics and Visualization 2007 (CGV2007)
+}
+\closesection
+
+% =======================================================
+\section{Reviewer for (selected)}
+
+\cvlistitem{
+ACM Transactions on Graphics
+}
+\cvlistitem{
+ IEEE Transactions on Visualization and Computer Graphics
+}
+\cvlistitem{
+IEEE Computer Graphics and Applications
+}
+\cvlistitem{
+ Computer Graphics Forum
+}
+\cvlistitem{
+ ACM SIGGRAPH
+%Conference,
+}
+\cvlistitem{
+ Eurographics Symposium on Rendering (EGSR)
+}
+\cvlistitem{
+ IEEE Visualization
+}
+\cvlistitem{
+ Eurographics
+}
+\cvlistitem{
+ Virtual Reality, Modeling, and Visualization (VMV)
+}
+\cvlistitem{
+ Graphics Interface
+}
+\cvlistitem{
+ Pacific Graphics
+}
+\cvlistitem{ 
+Central European Journal of Physics
+}
+\cvlistitem{ 
+International Symposium on Visual Computing (ISVC)
+}
+\closesection
+
+% =======================================================
+%% \section{Memberships}
+
+%% % -------------------------------------------------------
+%% \cvlistitem{
+%% IEEE Visualization and Graphics Technical Committee (vgtc)
+%% }
+%% % -------------------------------------------------------
+%% \cvlistitem{
+%% ACM Siggraph
+%% }
+%% \cvlistitem{
+%% Afrigraph (founding member)
+%% }
+%% \closesection
+
+
+
+
+
+
+
+
+
+
+\pagebreak
+% =======================================================
+% =======================================================
+% =======================================================
+
+\firstnamestyle{\Huge{Grant Capture}}
+\vspace*{-8mm}
+
+~\\
+\begin{center}
+{%\color{sectionrectanglecolor}
+\textbf{Note: Grant capture applies only between mid 2006 (when I became a research professor eligible to submit proposals) and mid 2007 (when I joined Intel).}}
+\end{center}
+
+\section{Grants awarded}
+
+\cvownitem{OSPRay: A Open, Scalable, and Parallel Ray Tracing Infrastructure}
+{Intel Visual Computing Institute Research Project Proposal}{PI: Ingo Wald, Intel Corp. Co-PIs: Prof Dr.-ing.\ Philipp Slusallek, Saarland University, requested amount 3xEUR~75,000 (granted Feb 2012)}{}
+%
+\cvownitem{SDCI HPC: Improvement and Release of the Uintah computational framework}
+{NSF proposal number OCI-0721659}{PI: Martin Berzins, University of Utah. Co-PIs: Steven G.\ Parker and Ingo Wald,  University of Utah. Requested amount: \$920,495 (awarded to M.\ Berzins \& S.\ Parker after I left the University of Utah)}{}
+%
+%% \cvownitem{Hardware grant of various High-End CPUs and Workstations}
+%% {Bulk hardware donation to equip PhD students at the University of Utah}{(value unknown)}{}
+%
+\cvownitem{Consulting Agreement}
+{Intel Corp, \$50,000}{Summer 2007}{}
+%
+\closesection
+
+\section{Applications Cancelled when I left Academia}
+
+ \cvownitem{Intel Systems and Communications Research Council}{Realtime
+   Ray Tracing of Advanced Lighting Effects using modern Multi-core
+   Architectures}{PI: Ingo Wald, University of Utah.  Requested amount:
+   \$225,000 over three years, plus equipment (positively reviewed,
+   then cancelled due to conflict-of-interest once I joined
+   Intel)}
+
+%\cvownitem{ U.S.\ Army Research Laboratories}{Development of advanced ray tracing applications for ballistic
+%penetration and electromagnetic propagation studies}{
+%PI: Ingo Wald, University of Utah.
+%Requested amount for the first year: \$150,000}
+
+%% \section{Proposals Submitted but Not Awarded}
+
+%% \cvownitem{
+%% NSF proposal number  CCF-0702009}{Algorithms for Handling Advanced Lighting
+%% Effects in Packet/Frustum-Based Ray Tracing Architectures}{ PI: Ingo
+%% Wald, University of Utah. Requested amount: \$577,479}
+
+\closesection
+
+%Various hardware grants (Intel, AMD, NVidia) and loans (NVidia, IBM)
+%awarded during my PhD and Post-doc time are not separately listed.
+
+\bigskip
+\bigskip
+\bigskip
+
+
+\vspace*{-8mm}
+\firstnamestyle{\Huge{Industrial Experience}}
+%\vspace*{-6mm}
+%\vspace*{6mm}
+
+\section{}
+
+%\cventry{2000--2004}{
+%Dr.-ing.%
+%%PhD in Computer Science
+%}{Saarland University,
+%  Saarbr\"ucken, Germany}
+%{}{}{Awarded Degree: Dr.-ing. mit Auszeichnung (PhD in Computer Science, with distinction)%}
+
+\cventry{Jul 2013--current}{Intel Corp}{Technical Computing Group / Data Center Group}{Austin, TX}{}{Senior Staff Research Scientist, Tech Lead Ray Tracing and Software Defined Visualization}
+
+\cventry{Feb 2013--Jun 2013}{Intel Corp}{Experiences Technology Lab, Intel Labs}{Austin, TX}{Senior Staff Research Scientist}{}
+
+\cventry{Mar 2012--Feb 2013}{Intel Corp}{Intel Labs, Visual Applications Research Lab (VAR)}{Staff Research Scientist, attached to the Intel Visual Computing Institute, Saarbruecken, Germany}{}{}
+
+\cventry{Nov 2007--Mar 2012}{Intel Corp}{Corporate Technology Group/Intel Labs, Research Scientist Visual Applications Research Lab (VAR)}{}{}{}
+%\cventry{Nov 2007--current}{Intel Corp}{Corporate Technology Group, Visual Applications Research Lab (VAR)}{}{}{Senior Research Scientist}
+
+\cventry{May--Aug 2007}{Intel Corp}{Santa Clara, CA,
+  USA}{}{}
+{Visiting Professor / Consultant in the Advanced Graphics Architectures Lab.}
+
+\cventry{2003--2006}{\emph{in}Trace Realtime Ray Tracing
+  GmbH}{Saarbr\"ucken, Germany}{}{}
+{\ende{Co-founder and Vice-CEO.}{Mitgr\"under und zweiter
+    Gesch\"aftsf\"uhrer}}
+
+\cventry{May--Aug 2002}{Intel Corp}{Santa Clara, CA, USA}{}{}
+{Internship, Microprocessor Research Labs / Advanced Graphics
+  Architectures.}
+
+%% \cventry{Feb--Mar 1997}
+%% {Daimler-Benz Aerospace (DASA)}{Bremen, Germany}{(now EADS)}{}
+%% {Internship, Division of Space \& Infrastructure, DASA, Bremen, Germany.
+%% }
+\closesection
+
+
+
+%\cvownitem{NSF proposal number OCI-0721659}{SDCI HPC: Improvement and
+%  Release of the Uintah computational framework.}{ }
+%{PI: Martin Berzins, University of Utah. Co-PIs: Steven G.\ Parker and Ingo Wald,  University of Utah. Requested amount: \$920,495 (awarded, transferred to Steven Parker as sole PI after I left Utah)}
+
+%\cvownitem{Intel}{Hardware grant of various High-End CPUs and Workstations
+%  to equip PhD students at the University of Utah}{(bulk hardware
+%  donation, value unknown)}
+
+
+
+%\closesection
+%\medskip
+% =======================================================
+%\section{Pending Funds}
+
+% \cvownitem{Intel Systems and Communications Research Council}{Realtime
+%   Ray Tracing of Advanced Lighting Effects using modern Multi-core
+%   Architectures}{PI: Ingo Wald, University of Utah.  Requested amount:
+%   \$225,000 over three years, plus equipment (positively reviewed,
+%   but then blocked due to conflict-of-interest issues after I joined
+%   Intel)}
+
+%\cvownitem{ U.S.\ Army Research Laboratories}{Development of advanced ray tracing applications for ballistic
+%penetration and electromagnetic propagation studies}{
+%PI: Ingo Wald, University of Utah.
+%Requested amount for the first year: \$150,000}
+
+%\cvownitem{
+%NSF proposal number  CCF-0702009}{Algorithms for Handling Advanced Lighting
+%Effects in Packet/Frustum-Based Ray Tracing Architectures}{ PI: Ingo
+%Wald, University of Utah. Requested amount: \$577,479}
+
+%\cvownitem{NVidia professor partnership program}{Realtime Ray Tracing on a
+%G80}{PI: Ingo Wald, University of Utah. Requested amount: \$36,000}
+
+
+
+%\closesection
+
+
+
+
+
+
+
+
+
+\pagebreak
+
+%\pagebreak
+% =======================================================
+% =======================================================
+% =======================================================
+
+\firstnamestyle{\Huge{Research Projects I am/was Involved In (selected)}}
+\vspace*{6mm}
+
+
+\def\cvproject#1#2#3#4{\cvitem{{#1}}{{\bfseries
+      #2.}{\ifthenelse{\equal{#3}{}}{}{\ #3}}{\ifthenelse{\equal{#4}{}}{}{\ \emph{#4}.}}}}
+
+%\def\cvproject#1#2#3#4{\cvitem{{#1}}{{\bfseries
+%      #2.\ }{\ifthenelse{\equal{#3}{}}{}{\\#3}}{\ifthenelse{\equal{#4}{}}{}{\\\emph{#4}.\ }}}}
+
+
+% =======================================================
+\section{}%Conducted Research Projects}
+
+\cvproject{2013--ongoing}{OSPRay---A Open, Scalable, and Portable Ray
+  Tracing Infrastructure}{}{Development of a new ray tracing based
+  software renderer for scalable and high-fidelity visualization
+  (early prototype)}
+
+\cvproject{SC 2013}{Intel ``Marquee'' demo at SuperComputing 2013}{}{The Marquee demo at SC13 showcased several ray tracing vis applications (using Embree and RIVL/BNSView) on the ``Cherry Creek'' supercomputer (then \#400 on the Top500 list)}
+
+\cvproject{2013--}{Ray Tracing based Visualization on Intel Architectures at TACC}{}{In close collaboration with the Texas Advanced Computing Center (TACC), funded by Intel Technical Computing Group and building on certain software packages I am tech lead on.}
+
+\cvproject{SC 2012}{Xeon Phi/KNC Launch Demo at Supercomputing
+  2012}{Using the Dreamworkd ``torch'' interactive lighting tool to
+  showcase the launch of the Intel Xeon Phi product line at
+  Supercomputing 2012 in Salt Lake City, UT.}{In collaboration with
+  Dreamworks, the Intel Embree Team, and a team in Intel SSG.}
+
+\cvproject{2012--}{Intel-Dreamworks Rendering Collaboration} {As part
+  of an ongoing collaboration with Dreamworks, we are developing
+  several technologies based on fast ray tracing on intel hardware,
+  all using Embree 2.0: The Dreamworks ``torch'' interactive lighting
+  preview tool, ray tracing of hair, ...}{In collaboration with
+  Dreamworks, the Intel Embree Team, and a team in Intel SSG.}
+
+\cvproject{2012--}{Embree 2.0}{A (originally IVL-based) version of the Intel
+\emph{Embree} ray tracer that now embraces SPMD, also now runs on AVX and MIC/Xeon Phi.}{}
+
+\cvproject{2012--}{(R)IVL}{A (IVL-based) portable and extensible
+  high-performnace ray tracing architecture for Intel CPUs, with support for
+  compressed large models, isosurfaces, volume rendering, balls-and-sticks, etc. Demo'ed,
+  for example, at the Intel VCG Tech Summit (best presentation award),
+  Research at Intel Europe Day, etc.}{Main author: Ingo Wald, in
+  collaboration with Carsten Benthin.}
+
+\cvproject{2011--}{ISPC}{The Intel SPMD Compiler Project (now available as open
+  source at https://ispc.github.org).}{Main Author: Matt Pharr, Intel
+  Corp}
+
+\cvproject{2011--}{IVL}{A SPMD Program Compiler for Intel CPUs (with
+  back-ends for SSE, AVX, and MIC/Knights), allowing to program Intel
+  CPUs in a way similar to CUDA, while explicitly exposing the
+  advantages of CPUs.}{Main Author: Ingo Wald; underlying theoretical
+  part in collaboration with Hack et al, Saarland University}
+
+\cvproject{2010}{Denali}{A photo-realistic renderer infrastructure for
+Intel CPUs. Since released in Open Source under the name of ``Embree'')}{Main Authors: S.\ Woop, M.\ Ernst}
+
+\cvproject{2010--}{Programming models research and
+  evaluation}{Evaluating various programming models (intrinsics, AN,
+  Elemental Functions, OpenCL, IVL/ISPC, \dots) in terms of both
+  effectiveness and performance on various hardware architectures
+  (integrated graphics, (GP)GPU, CPU, MIC, \dots).}{}
+
+\cvproject{2008--2010}{Garfield}{A Intel-MIC (Larrabee/Knights)-based
+  real-time ray tracing engine for game-like content. Demoed at
+  various public events like Intel IDF, CeBit, etc.}{}
+
+\cvproject{2007--2008}{RTTL (The Ray Tracing Template Library)}{A real-time ray tracing engine for
+  many-core CPUs. Demo'ed at several public events like
+  Intel IDF, Siggraph, \dots}{}
+
+\cvproject{2005--2007}{Utah Ray Tracing Center of Excellence} {The State of Utah
+Ray Tracing Center of Excellence is fundet by the State of Utah, with
+the explicit aim of commercializing the ray tracing IP that is beeing
+developed at the University of Utah.  While established prior to my
+arrival in Utah, this explicitly includes the recently developed
+techniques for fast packet/frustum traversal and for handling dynamic
+scenes (DynRT).}{}
+
+\cvproject{2006--2007}{Dynamic Ray Tracing for visualizing large
+  and time-varying data sets} { Largely as part of the CSafe project
+  (CSafe - Center for the Simulation of Advanced Fires and
+  Explosions), this project concentrated on interactively visualizing
+  large and time-varying data sets based on the DynRT codebase. During
+  the course of this (ongoing) project we developed methods for
+  visualizing particle data sets, as well as large and time-varying
+  volume data sets in both structured and unstructured form.}{}
+
+\cvproject{2005--2007}{DynRT: Ray Tracing Dynamic Scenes} {
+Development of a ray tracing architecture that is particularly
+optimized for SMP desktop PCs, and which allows for
+ray tracing dynamically animated scenes via the development of new,
+unconventional acceleration data structures. The project developed
+several new approaches to ray tracing animated scenes, while at the
+same time staying at least competitive with the fastest known ray
+tracers even for static data sets. It led to several papers at
+prestigeous places like SIGGRAPH, TOG, Eurographics, etc. Since the
+developed methods are also competitive. The developed codebase forms
+the core for most of the recent ray tracing based rendering and
+visualization projects I was later on involved in.}{}
+
+\cvproject{SaarCOR\\  2001--2003\\~\\  Utah HWRT\\2006--2007}
+{Design of special-purpose Ray Tracing Hardware}
+%
+{I have been actively involved in two different hardware ray tracing
+  projects, one at Saarbr\"ucken, and on at Utah. At Saarbr\"ucken,
+  the ``SaarCOR'' project started as a spin-off project off the OpenRT
+  software ray tracing project. It was started by myself, J\"org
+  Schmittler, and Philipp Slusallek, and developed a hardware
+  implementation of the OpenRT software core.
+%
+Unrelated to the SaarCOR project, the University of Utah has also
+started a hardware ray tracing project that was originally proposed as
+a collaborative project between Peter Shirley, Steven Parker, Erik
+Brunvand, and Al Davis prior to me being at Utah. The project finally
+got fundet and started in early 2006, after which I joined it.}{}
+
+\cvproject{2003--2006}{inTrace -- Ray Tracing Solutions for
+  Industrial Applications} { Based on the OpenRT realtime ray tracing
+  engine, we developed several ray tracing based solutions to
+  practical industrial problems, including the interactive
+  visualization of massively complex engineering models (VW, Boeing),
+  as well as interactive photorealistic rendering of important
+  lighting effects like shadows, reflections, glass, etc, that
+  current, non-ray tracing based solutions cannot accurately simulate.
+  This project led to the foundation of inTrace realtime ray tracing
+  technologies GmbH, which commercializes this technology. The
+  technology is already being used by a large number of high-end
+  customers, including VW, Audi, DaimlerChrysler, EADS, BMW,
+  etc.  }{}
+
+\cvproject{2002--2005}{Fast and Interactive Global Illumination} {
+With the availability of a fast ray tracing architecuture (OpenRT, see
+below), it was a natural step to also use this architecture for
+simulating global illumination. This project led to a variety of
+interactive global illumination systems, including Instant Radiosity,
+a method to interactively compute global illumination in highly
+complex scenes, interactive photon mapping, and severeal precomputed
+global illumination techniques. Due to Utah having a stronger focus on
+visualization problems, I mostly stopped working on this project after
+moving to Utah, but recent trends in rendering seem to make a revival
+of this topic imminent; first steps towards interactive distribution
+ray tracing are already being done.} {}
+
+\cvproject{2000--2006}{OpenRT}
+{OpenRT is a highly versatile software system that enables realtime ray
+  tracing applications on PCs and PC cluster.
+%
+The OpenRT project was envisioned, designed, and realized in the
+  course of my PhD thesis. Since its foundation in 2000, the project
+  was continuously extended; while originally based on a highly
+  optimized implementation of the ray tracing algorithm only, it has
+  since then grown to support a whole set of additional services:
+  visualization of highly complex datasets, a out-of-core rendering
+  module, direct visualization of spline surfaces, parallel and
+  distributed rendering, support for volume and isosurface data sets,
+  point-based rendering, interactive visualization of indirect
+  illumination and caustics, etc. The OpenRT project has led to
+  several spin-off projects (the MassiveRT project, SaarCOR, Instant
+  Global Illumination, etc), provided the basis for founding the
+  \emph{in}Trace Realtime Ray Tracing GmbH, led to more than 30
+  OpenRT-based papers, and 5 different PhD theses.}{}
+
+\cvproject{1997--1999}{McRender}{McRender is a Monte Carlo-based global
+  illumination rendering package designed and developed by Alexander
+  Keller at the University of Kaiserslautern. I was first involved in
+  the project as a research assistant, in the course of which I added
+  several new ray tracing data structures and traversal methods, as
+  well as helped in developing various hierarchical global
+  illumination schemes. During my masters thesis, I also extended it
+  to handle Photon Mapping, including several new importance sampling
+  scehemes that were published later on.}{}
+
+
+\closesection
+\medskip
+
+%\pagebreak
+% \firstnamestyle{\Huge{Industrial Experience}}
+% \vspace*{6mm}
+
+% \section{}
+
+% %\cventry{2000--2004}{
+% %Dr.-ing.%
+% %%PhD in Computer Science
+% %}{Saarland University,
+% %  Saarbr\"ucken, Germany}
+% %{}{}{Awarded Degree: Dr.-ing. mit Auszeichnung (PhD in Computer Science, with distinction)%}
+
+% \cventry{Nov 2007--current}{Intel Corp}{Corporate Technology Group, Advanced Graphics Architectures (CTG/MTL/ARL); Visual Applications Research Lab (VAR)}{}{}{Senior Research Scientist}
+
+% \cventry{May--Aug 2007}{Intel Corp}{Santa Clara, CA,
+%   USA}{}{}
+% {as a Visiting Professor in the Advanced Graphics Architectures Lab.}
+
+% \cventry{2003--2006}{\emph{in}Trace Realtime Ray Tracing
+%   GmbH}{Saarbr\"ucken, Germany}{}{}
+% {\ende{Co-founder and Vice-CEO.}{Mitgr\"under und zweiter
+%     Gesch\"aftsf\"uhrer}}
+
+% \cventry{May--Aug 2002}{Intel Corp}{Santa Clara, CA, USA}{}{}
+% {in the Microprocessor Research Labs / Advanced Graphics
+%   Architectures.}
+
+% \cventry{Feb--Mar 1997}
+% {Daimler-Benz Aerospace (DASA)}{Bremen, Germany}{}{}
+% {Internship, Division of Space\&Infrastructure, DASA, Bremen, Germany.
+% }
+% \closesection
+
+
+
+\bigskip
+\bigskip
+\bigskip
+
+
+\ifx\empty
+\pagebreak
+\firstnamestyle{\Huge{Co-Supervised Students}}
+\vspace*{6mm}
+
+I only became officially eligible for serving on PhD commitees after
+my visiting professor's appointment was changed to a research
+professorship in the summer of 2006. Before that date, I technically
+co-advised students, but did not officially serve on their respective
+committees. 
+\\[1ex]
+
+\section{On PhD Committees for}
+
+\cventry{2006--current}{Dave Edwards}{School of Computing, University
+  of Utah}{main adviser P.\
+  Shirley}{}{Sampling for ray based rendering.}
+
+\cventry
+{2006--current}
+{Aaron Knoll}
+{SCI Institute, University of Utah}
+{main adviser Charles D.\ Hansen}{}
+{Interactive Visualization of large and time-varying volume data.}
+\cventry{2006--current}{Andrew Kensler}{SCI Institute, University of
+  Utah}{main adviser S.\ Parker}{}{Fast traversal and Intersection
+  methods.}
+\cventry
+{2005--current}
+{Thiago Ize}
+{SCI Institute, University of Utah}
+{main adviser C.\ Hansen}{}
+{Algorithms and Data Structures for Dynamic Geometry and Parallel Ray Tracing Systems.}
+\cventry
+{2005--current}
+{Vincent Pegoraro}
+{SCI Institute, University of Utah}
+{main adviser S.\ Parker}{}
+{Efficient Monte-Carlo Methods for Global Illumination and Participating Media.}
+
+\closesection
+
+\section{Co-Supervised PhD Students {\small (before having an academic appointment)}}
+\cventry
+{2005--current}
+{Solomon Boulos}
+{School of Computing, University of Utah}
+{princ.\ adv.\ P.\ Shirley}{}
+{Ray tracing dynamic scenes, interactive ray
+  tracing of advanced illumination effects.}
+\cventry
+{2001--2005}
+{Johannes G\"unther}
+{Saarland University}
+{princ.\ adv.\ Ph.\ Slusallek}{}
+{{Realtime} {Ray} {Tracing} on current {CPU} {Architectures}
+  (successfully defended in 2006)}
+\cventry
+{2001--2005}
+{J\"org Schmittler}
+{Saarland University}
+{princ.\ adv.\ Ph.\ Slusallek}{}
+{{SaarCOR} - {A} {Hardware}-{Architecture} for {Realtime} {Ray} {Tracing} (successfully
+  defended in 2005).}
+\cventry
+{2004--2005}
+{Johannes G\"unther}
+{MPI Informatik}
+{princ.\ adv.\ H-P.\ Seidel}{}
+{Ray tracing dynamic scenes, interactive global illumination.}
+\cventry
+{2004--2005}
+{Heiko Friedrich}
+{Saarland University}
+{princ.\ adv.\ Ph.\ Slusallek}{}
+{Ray tracing for future games and volume visualization.}
+
+
+\closesection
+\section{Co-Supervised Masters Students {\small (before having an academic appointment)}}
+\cventry
+{2004--2005}
+{Stefan Sch\"uffler}
+{Saarland University}
+{princ.\ adv.\ Ph.\ Slusallek}{}
+{OSRT - An Open Source implementation of the OpenRT API.}
+\cventry
+{2000--2001}
+{Carsten Benthin}
+{Saarland University}
+{princ.\ adv.\ Ph.\ Slusallek}{}
+{Interactive {Distributed} {Ray} {Tracing} of {Highly} {Complex} {Models}.}
+\cventry
+{2002--2003}
+{Johannes G\"unther}
+{Saarland University}
+{princ.\ adv.\ Ph.\ Slusallek}{}
+{{Realtime} {Caustics} {using} {Distributed} {Photon} {Mapping}.}
+\cventry
+{2002--2004}
+{Heiko Friedrich}
+{Saarland University}
+{princ.\ adv.\ Ph.\ Slusallek}{}
+{Interactive Iso-Surface Ray Tracing using Implicit KD-Trees.}
+\cventry
+{2001--2002}
+{Markus Wagner}
+{Saarland University}
+{princ.\ adv.\ Ph.\ Slusallek}{}
+{Development of a {Ray-Tracing-Based} {VRML} {Browser} and {Editor}.}
+
+
+
+\closesection
+\fi
+
+\end{document}
+
+
+%% end of file `jdoe_casual.tex'.
